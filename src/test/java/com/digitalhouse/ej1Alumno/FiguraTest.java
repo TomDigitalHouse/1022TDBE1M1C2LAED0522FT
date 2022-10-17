@@ -1,3 +1,5 @@
+package com.digitalhouse.ej1Alumno;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -6,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class FiguraTest {
 
     @Test
-    @DisplayName("Testeando area del cuadrado")
+    @DisplayName("WHEN a Cuadrado object calls its calcularArea method THEN it should set the correct area")
     void testeandoAreaCuadrado(){
         //GIVEN
         var cuadradin = new Cuadrado(4.0);
@@ -17,7 +19,7 @@ class FiguraTest {
     }
 
     @Test
-    @DisplayName("Testeando area del circulo")
+    @DisplayName("WHEN a Circulo object calls its calcularArea method THEN it should set the correct area")
     void testeandoAreaCirculo(){
         //GIVEN
         var circulin = new Circulo(4.0);
@@ -28,22 +30,20 @@ class FiguraTest {
     }
 
     @Test
+    @DisplayName("GIVEN a Cuadrado object with -1.0 as numero THEN it should throw an ArithmeticException")
     void testeandoFalloAritmeticoCuadrado(){
         //GIVEN
         var cuadradin = new Cuadrado(-1.0);
         //THEN
-        //assertEquals(cuadradin.getArea(),16.0);
         assertThrows(ArithmeticException.class, ()-> cuadradin.calcularArea());
-        System.out.println("El lado del cuadrado debe ser mayor a 0");
     }
 
     @Test
+    @DisplayName("GIVEN a Circulo object with -1.0 as numero THEN it should throw an ArithmeticException")
     void testeandoFalloAritmeticoCirculo(){
         //GIVEN
         var circulin = new Circulo(-1.0);
         //THEN
-        //assertEquals(cuadradin.getArea(),16.0);
         assertThrows(ArithmeticException.class, ()-> circulin.calcularArea());
-        System.out.println("El radio del circulo debe ser mayor a 0");
     }
 }

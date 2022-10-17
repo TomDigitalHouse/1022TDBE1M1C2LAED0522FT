@@ -5,13 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc4fe456-1224-43d2-a842-7df8bf90052b" name="Changes" comment="Project setup">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/Grupo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/NoTieneSuficentesLetrasExeception.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/Persona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/UnderAgeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej1/GrupoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej1/PersonaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1Alumno/Circulo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1Alumno/Cuadrado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1Alumno/Figura.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej1Alumno/FiguraTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjercicioAlumno/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjercicioAlumno/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjercicioAlumno/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjercicioAlumno/Clase 1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjercicioAlumno/src/Circulo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjercicioAlumno/src/Cuadrado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjercicioAlumno/src/Figura.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjercicioAlumno/src/FiguraTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjercicioAlumno/src/NumeroMenorCero.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +63,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2GBke3oG3ky4u2kyPkob43vE6hy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -64,8 +76,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "full.screen.before.presentation.mode": "false"
+    "full.screen.before.presentation.mode": "false",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -76,7 +90,76 @@
       <recent name="com.digitalhouse.ej1" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GrupoTest">
+  <component name="RunManager" selected="Gradle.FiguraTest">
+    <configuration name="FiguraTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.digitalhouse.ej1Alumno.FiguraTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="FiguraTest.testeandoAreaCuadrado" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.digitalhouse.ej1Alumno.FiguraTest.testeandoAreaCuadrado&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="FiguraTest.testeandoFalloAritmeticoCirculo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.digitalhouse.ej1Alumno.FiguraTest.testeandoFalloAritmeticoCirculo&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="GrupoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -91,52 +174,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.digitalhouse.ej1.GrupoTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="GrupoTest.test1 (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.digitalhouse.ej1.GrupoTest.test1&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="GrupoTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.digitalhouse.ej1.GrupoTest.test2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -169,29 +206,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PersonaTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.digitalhouse.ej1.PersonaTest.test1&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="BackEnd1" />
       <method v="2">
@@ -207,11 +221,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FiguraTest" />
+        <item itemvalue="Gradle.FiguraTest.testeandoFalloAritmeticoCirculo" />
+        <item itemvalue="Gradle.FiguraTest.testeandoAreaCuadrado" />
         <item itemvalue="Gradle.GrupoTest" />
         <item itemvalue="Gradle.GrupoTest.test3 (1)" />
-        <item itemvalue="Gradle.GrupoTest.test2" />
-        <item itemvalue="Gradle.GrupoTest.test1 (1)" />
-        <item itemvalue="Gradle.PersonaTest.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -271,9 +285,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="Project setup" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/BackEnd1$GrupoTest.ic" NAME="GrupoTest Coverage Results" MODIFIED="1665875141680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Back_End_I___Clase_1$GrupoTest.ic" NAME="GrupoTest Coverage Results" MODIFIED="1666027154526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/BackEnd1$GrupoTest_test3.ic" NAME="GrupoTest.test3 Coverage Results" MODIFIED="1665955545854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/BackEnd1$Tests_in__com_digitalhouse_.ic" NAME="Tests in 'com.digitalhouse' Coverage Results" MODIFIED="1665955626079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/BackEnd1$GrupoTest.ic" NAME="GrupoTest Coverage Results" MODIFIED="1665875141680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
