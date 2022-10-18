@@ -4,31 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc4fe456-1224-43d2-a842-7df8bf90052b" name="Changes" comment="Fix lombok">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/empleados/Empleado.java" afterDir="false" />
+    <list default="true" id="cc4fe456-1224-43d2-a842-7df8bf90052b" name="Changes" comment="Intial commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/LiquidadorContratado.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/empleados/EmpleadoContratado.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/empleados/EmpleadoEfectivo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/empleados/EmpleadoIncorrectoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/liquidadores/Liquidador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/liquidadores/LiquidadorContratado.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/liquidadores/LiquidadorEfectivo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej1/EmpleadoTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej1/LiquidadorContratadoTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej1/LiquidadorEfectivoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej1/LiquidadorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/liquidadores/Liquidador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/liquidadores/Liquidador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej1/LiquidadorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej1/LiquidadorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +57,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="clase2" />
+        <entry key="$PROJECT_DIR$" value="class/c1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -113,7 +98,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.Tests in 'Back_End_I_-_Clase_2.test'">
-    <configuration name="EmpleadoTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LiquidadorContratadoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -126,7 +111,53 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.digitalhouse.ej1.EmpleadoTest.test1&quot;" />
+            <option value="&quot;com.digitalhouse.ej1.LiquidadorContratadoTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="LiquidadorContratadoTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.digitalhouse.ej1.LiquidadorContratadoTest.test2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="LiquidadorEfectivoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.digitalhouse.ej1.LiquidadorEfectivoTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -159,29 +190,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LiquidadorEfectivoTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.digitalhouse.ej1.LiquidadorEfectivoTest.test2&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="Tests in 'Back_End_I_-_Clase_2.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -194,29 +202,6 @@
         <option name="taskNames">
           <list>
             <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Tests in 'com.digitalhouse.ej1'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.digitalhouse.ej1.*&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -242,10 +227,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'Back_End_I_-_Clase_2.test'" />
-        <item itemvalue="Gradle.Tests in 'com.digitalhouse.ej1'" />
-        <item itemvalue="Gradle.LiquidadorEfectivoTest.test2" />
+        <item itemvalue="Gradle.LiquidadorEfectivoTest" />
+        <item itemvalue="Gradle.LiquidadorContratadoTest.test2" />
+        <item itemvalue="Gradle.LiquidadorContratadoTest" />
         <item itemvalue="Gradle.LiquidadorEfectivoTest.test1" />
-        <item itemvalue="Gradle.EmpleadoTest.test1" />
       </list>
     </recent_temporary>
   </component>

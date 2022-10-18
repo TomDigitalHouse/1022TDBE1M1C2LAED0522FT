@@ -6,7 +6,7 @@ import lombok.Getter;
 
 @Getter
 public abstract class Liquidador {
-    public abstract int calular(Empleado empleado) throws EmpleadoIncorrectoException;
+    public abstract int calcular(Empleado empleado) throws EmpleadoIncorrectoException;
 
     public abstract String imprimir(final int saldo);
 
@@ -15,7 +15,7 @@ public abstract class Liquidador {
     }
 
     public final String liquidarSueldo(Empleado empleado) throws EmpleadoIncorrectoException {
-        var saldo = calular(empleado);
+        var saldo = calcular(empleado);
         depositar();
 
         return imprimir(saldo);
