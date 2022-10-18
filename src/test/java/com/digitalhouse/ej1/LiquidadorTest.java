@@ -18,7 +18,7 @@ class LiquidadorTest {
         //WHEN
         liquidador.liquidarSueldo(empleado);
         //THEN
-        verify(liquidador).calular(empleado);
+        verify(liquidador).calcular(empleado);
         verify(liquidador).imprimir(anyInt());
         verify(liquidador).depositar();
     }
