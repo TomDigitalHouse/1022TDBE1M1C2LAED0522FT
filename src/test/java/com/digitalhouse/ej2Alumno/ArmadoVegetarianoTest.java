@@ -12,8 +12,10 @@ class ArmadoVegetarianoTest {
     void armadoMenuTest() {
         //GIVEN
         var armadoMenu = new ArmadoVegetariano();
+        //WHEN
+        var aux = armadoMenu.armadoMenu();
         //THEN
-        assertEquals("El armado del menu vegetariano lleva especias y salsas",armadoMenu.armadoMenu());
+        assertEquals("El armado del menu vegetariano lleva especias y salsas",aux);
     }
 
     @Test

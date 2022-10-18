@@ -1,14 +1,12 @@
 package com.digitalhouse.ej2Alumno;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
+@AllArgsConstructor
 public abstract class Menu {
-    private double base;
-
-    public Menu(double base) {
-        this.base = base;
-    }
+    private final double base;
 
     public abstract double calcularRecargo();
 }

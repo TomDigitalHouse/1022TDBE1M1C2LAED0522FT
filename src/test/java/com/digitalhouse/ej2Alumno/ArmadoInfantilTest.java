@@ -12,8 +12,10 @@ class ArmadoInfantilTest {
     void armadoMenuTest() {
         //GIVEN
         var armadoMenu = new ArmadoInfantil();
+        //WHEN
+        var aux = armadoMenu.armadoMenu();
         //THEN
-        assertEquals("El armado del menu infantil debe llevar juguetes",armadoMenu.armadoMenu());
+        assertEquals("El armado del menu infantil debe llevar juguetes",aux);
     }
 
     @Test

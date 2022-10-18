@@ -11,10 +11,10 @@ class MenuInfantilTest {
     @DisplayName("WHEN the method calcularRecargo THEN it returns a double")
     void calcularRecargo() {
         //GIVEN
-        var aux1 = new MenuInfantil(10.0,2);
+        var cliente = new MenuInfantil(10.0,2);
         //WHEN
-        var aux2 = aux1.calcularRecargo();
+        var aux = cliente.calcularRecargo();
         //THEN
-        assertEquals(aux2,6.0);
+        assertEquals(aux,6.0);
     }
 }

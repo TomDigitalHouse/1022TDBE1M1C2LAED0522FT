@@ -12,8 +12,10 @@ class ArmadoClasicoTest {
     void armadoMenuTest() {
         //GIVEN
         var armadoMenu = new ArmadoClasico();
+        //WHEN
+        var aux = armadoMenu.armadoMenu();
         //THEN
-        assertEquals("El armado del menu clasico no lleva adicionales",armadoMenu.armadoMenu());
+        assertEquals("El armado del menu clasico no lleva adicionales",aux);
     }
 
     @Test

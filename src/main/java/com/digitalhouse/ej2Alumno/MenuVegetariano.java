@@ -1,8 +1,8 @@
 package com.digitalhouse.ej2Alumno;
 
 public class MenuVegetariano extends Menu{
-    private boolean especias;
-    private int salsas;
+    private final boolean especias;
+    private final int salsas;
 
     public MenuVegetariano(double base, boolean especias, int salsas) {
         super(base);

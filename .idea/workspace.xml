@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="cc4fe456-1224-43d2-a842-7df8bf90052b" name="Changes" comment="Intial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej2Alumno/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej2Alumno/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej2Alumno/MenuVegetariano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej2Alumno/MenuVegetariano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej2Alumno/ArmadoClasicoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej2Alumno/ArmadoClasicoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej2Alumno/ArmadoInfantilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej2Alumno/ArmadoInfantilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej2Alumno/ArmadoVegetarianoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej2Alumno/ArmadoVegetarianoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej2Alumno/MenuClasicoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej2Alumno/MenuClasicoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej2Alumno/MenuInfantilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej2Alumno/MenuInfantilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej2Alumno/MenuVegetarianoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej2Alumno/MenuVegetarianoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,6 +304,7 @@
     <SUITE FILE_PATH="coverage/BackEnd1$GrupoTest_test3.ic" NAME="GrupoTest.test3 Coverage Results" MODIFIED="1665955545854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/BackEnd1$Tests_in__com_digitalhouse_.ic" NAME="Tests in 'com.digitalhouse' Coverage Results" MODIFIED="1665955626079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Back_End_I___Clase_2$Tests_in__Back_End_I___Clase_2_test_.ic" NAME="Tests in 'Back_End_I_-_Clase_2.test' Coverage Results" MODIFIED="1666112238707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Back_End_I___Clase_2$Tests_in__com_digitalhouse_ej2Alumno_.ic" NAME="Tests in 'com.digitalhouse.ej2Alumno' Coverage Results" MODIFIED="1666127631317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/BackEnd1$GrupoTest.ic" NAME="GrupoTest Coverage Results" MODIFIED="1665875141680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
