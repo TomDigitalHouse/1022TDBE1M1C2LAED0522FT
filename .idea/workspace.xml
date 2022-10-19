@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc4fe456-1224-43d2-a842-7df8bf90052b" name="Changes" comment="Fix lombok">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/EjercicioMesa6/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/EjercicioMesa6/MenuClasico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/EjercicioMesa6/MenuInfantil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/EjercicioMesa6/MenuVegetariano.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/EjercicioMesa6/MenuClasicoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/EjercicioMesa6/MenuInfantilTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/EjercicioMesa6/MenuTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/EjercicioMesa6/MenuVegetarianoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/empleados/EmpleadoEfectivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/empleados/EmpleadoEfectivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EjercicioMesa6/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EjercicioMesa6/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EjercicioMesa6/MenuInfantil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EjercicioMesa6/MenuInfantil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EjercicioMesa6/MenuVegetariano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EjercicioMesa6/MenuVegetariano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EjercicioMesa6/MenuClasicoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EjercicioMesa6/MenuClasicoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "EjercicioMesa6.MenuClasico",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "EjercicioMesa6.Menu",
     "create.test.in.the.same.root": "true",
     "full.screen.before.presentation.mode": "false",
     "nodejs_package_manager_path": "npm",
@@ -108,8 +106,8 @@
       <recent name="com.digitalhouse.ej1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MenuClasicoTest.test1">
-    <configuration name="EmpleadoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="JUnit.MenuTest.test1">
+    <configuration name="MenuInfantilTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -122,7 +120,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.digitalhouse.ej1.EmpleadoTest&quot;" />
+            <option value="&quot;EjercicioMesa6.MenuInfantilTest.test1&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -131,67 +129,6 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
-    </configuration>
-    <configuration name="MenuClasicoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;EjercicioMesa6.MenuClasicoTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="MenuClasicoTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;EjercicioMesa6.MenuClasicoTest.test1&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="EmpleadoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Back_End_I_-_Clase_2.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.digitalhouse.ej1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.digitalhouse.ej1" />
-      <option name="MAIN_CLASS_NAME" value="com.digitalhouse.ej1.EmpleadoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="MenuClasicoTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Back_End_I_-_Clase_2.test" />
@@ -203,6 +140,54 @@
       </extension>
       <option name="PACKAGE_NAME" value="EjercicioMesa6" />
       <option name="MAIN_CLASS_NAME" value="EjercicioMesa6.MenuClasicoTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MenuInfantilTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Back_End_I_-_Clase_2.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="EjercicioMesa6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="EjercicioMesa6" />
+      <option name="MAIN_CLASS_NAME" value="EjercicioMesa6.MenuInfantilTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MenuTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Back_End_I_-_Clase_2.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="EjercicioMesa6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="EjercicioMesa6" />
+      <option name="MAIN_CLASS_NAME" value="EjercicioMesa6.MenuTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MenuVegetarianoTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Back_End_I_-_Clase_2.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="EjercicioMesa6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="EjercicioMesa6" />
+      <option name="MAIN_CLASS_NAME" value="EjercicioMesa6.MenuVegetarianoTest" />
       <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -224,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MenuTest.test1" />
+        <item itemvalue="JUnit.MenuVegetarianoTest.test1" />
+        <item itemvalue="JUnit.MenuInfantilTest.test1" />
+        <item itemvalue="Gradle.MenuInfantilTest.test1" />
         <item itemvalue="JUnit.MenuClasicoTest.test1" />
-        <item itemvalue="JUnit.EmpleadoTest" />
-        <item itemvalue="Gradle.MenuClasicoTest" />
-        <item itemvalue="Gradle.EmpleadoTest" />
-        <item itemvalue="Gradle.MenuClasicoTest.test1" />
       </list>
     </recent_temporary>
   </component>

@@ -1,6 +1,8 @@
 package EjercicioMesa6;
 
+import lombok.Getter;
 
+@Getter
 public class MenuInfantil extends Menu {
     private final int cantidadJuguetes;
     private final Double precioFinal;
