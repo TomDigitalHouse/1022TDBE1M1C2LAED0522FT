@@ -1,12 +1,18 @@
-package com.digitalhouse.ej2Alumno;
+package mesa_2;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public abstract class Menu {
-    private final double base;
+    private Double precioBase;
 
-    public abstract double calcularRecargo();
+    public Menu(Double precioBase) {
+        this.precioBase = precioBase;
+    }
+
+    public abstract Double calcularPrecio();
+
+    public Double getPrecioBase() {
+        return precioBase;
+    }
 }

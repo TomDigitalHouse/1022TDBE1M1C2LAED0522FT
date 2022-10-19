@@ -1,12 +1,13 @@
-package com.digitalhouse.ej2Alumno;
+package mesa_2;
 
 public class MenuClasico extends Menu{
-    public MenuClasico(double base) {
-        super(base);
+
+    public MenuClasico(Double precioBase) {
+        super(precioBase);
     }
 
     @Override
-    public double calcularRecargo() {
-        return 0.0;
+    public Double calcularPrecio(){
+        return this.getPrecioBase();
     }
 }
