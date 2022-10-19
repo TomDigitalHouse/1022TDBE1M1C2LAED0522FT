@@ -1,4 +1,4 @@
-package EjercicioMesa6;
+package com.digitalhouse.ejAlberdiTomas;
 
 import lombok.Getter;
 
