@@ -31,7 +31,7 @@ class HandlerManagmentTest {
         //WHEN
         support.check(email);
         //THEN
-        verify(support, times(2)).getNextHandler();
+        verify(support).getNextHandler();
     }
 
     @Test
