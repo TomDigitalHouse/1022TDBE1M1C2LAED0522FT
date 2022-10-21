@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class IpAddress {
 
-    ArrayList<Integer> octetos = new ArrayList<>();
+   List<Integer> octetos = new ArrayList<>();
 
-    public IpAddress(ArrayList<Integer> octetos) {
+    public IpAddress(List<Integer> octetos) {
         this.octetos = octetos;
     }
 

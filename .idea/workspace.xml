@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc4fe456-1224-43d2-a842-7df8bf90052b" name="Changes" comment="Fix lombok">
+    <list default="true" id="29714343-5b6e-41d0-a927-3a86edc47707" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/PaisDenegadoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GrillaPeliculaProxyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GrillaPeliculaProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GrillaPeliculaProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IpAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IpAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/digitalhouse/ej1/LiquidadorContratado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/digitalhouse/ej1/Prueba.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,17 +29,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Back End I - Clase 2" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -40,16 +41,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
-        <option value="Record" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="class/c1" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,43 +57,33 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2GBke3oG3ky4u2kyPkob43vE6hy" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="2GSVMpt3hx7pwPgoKHwwkeyHQ4S" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.digitalhouse.ej1" />
+      <recent name="" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.digitalhouse.ej1" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.digitalhouse.ej1" />
+      <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LiquidadorTest.test1">
-    <configuration name="LiquidadorContratadoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.GrillaPeliculaProxyTest">
+    <configuration name="GrillaPeliculaProxyTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -106,7 +96,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.digitalhouse.ej1.LiquidadorContratadoTest&quot;" />
+            <option value="&quot;GrillaPeliculaProxyTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -116,7 +106,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LiquidadorContratadoTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GrillaPeliculaProxyTest.test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -129,7 +119,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.digitalhouse.ej1.LiquidadorContratadoTest.test2&quot;" />
+            <option value="&quot;GrillaPeliculaProxyTest.test2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -139,7 +129,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LiquidadorEfectivoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GrillaPeliculaProxyTest.validarReproduccion" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -152,7 +142,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.digitalhouse.ej1.LiquidadorEfectivoTest&quot;" />
+            <option value="&quot;GrillaPeliculaProxyTest.validarReproduccion&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -161,140 +151,46 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
-    </configuration>
-    <configuration name="LiquidadorTest.test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.digitalhouse.ej1.LiquidadorTest.test1&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Tests in 'Back_End_I_-_Clase_2.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="BackEnd1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="BackEnd1" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LiquidadorTest.test1" />
-        <item itemvalue="Gradle.Tests in 'Back_End_I_-_Clase_2.test'" />
-        <item itemvalue="Gradle.LiquidadorEfectivoTest" />
-        <item itemvalue="Gradle.LiquidadorContratadoTest.test2" />
-        <item itemvalue="Gradle.LiquidadorContratadoTest" />
+        <item itemvalue="Gradle.GrillaPeliculaProxyTest" />
+        <item itemvalue="Gradle.GrillaPeliculaProxyTest.test2" />
+        <item itemvalue="Gradle.GrillaPeliculaProxyTest.validarReproduccion" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cc4fe456-1224-43d2-a842-7df8bf90052b" name="Changes" comment="" />
-      <created>1665869463167</created>
+      <changelist id="29714343-5b6e-41d0-a927-3a86edc47707" name="Changes" comment="" />
+      <created>1666381926446</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1665869463167</updated>
-      <workItem from="1665869463169" duration="7000" />
-      <workItem from="1666110743289" duration="1602000" />
-      <workItem from="1666114296233" duration="123000" />
+      <updated>1666381926446</updated>
     </task>
-    <task id="LOCAL-00001" summary="asdasd">
-      <created>1665966000059</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1665966000059</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Project setup">
-      <created>1666020292042</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1666020292042</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="asdasd" />
-    <MESSAGE value="Project setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project setup" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Back_End_I___Clase_2$Tests_in__com_digitalhouse_ej1_.ic" NAME="Tests in 'com.digitalhouse.ej1' Coverage Results" MODIFIED="1666112201508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/BackEnd1$Tests_in__com_digitalhouse_.ic" NAME="Tests in 'com.digitalhouse' Coverage Results" MODIFIED="1665955626079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Back_End_I___Clase_2$Tests_in__Back_End_I___Clase_2_test_.ic" NAME="Tests in 'Back_End_I_-_Clase_2.test' Coverage Results" MODIFIED="1666112238707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Back_End_I___Clase_1$GrupoTest.ic" NAME="GrupoTest Coverage Results" MODIFIED="1666027154526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/BackEnd1$GrupoTest.ic" NAME="GrupoTest Coverage Results" MODIFIED="1665875141680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/BackEnd1$GrupoTest_test3.ic" NAME="GrupoTest.test3 Coverage Results" MODIFIED="1665955545854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/GrillaPeliculaProxyTest.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

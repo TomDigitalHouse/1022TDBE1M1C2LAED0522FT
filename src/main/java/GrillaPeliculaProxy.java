@@ -6,7 +6,7 @@ public class GrillaPeliculaProxy {
         this.grilla = grilla;
     }
 
-    public Pelicula validarReproduccion (IpAddress ip, String nombre) throws PeliculaNotFoundException, PaisNotFoundException{
+    public Pelicula validarReproduccion (IpAddress ip, String nombre) throws PeliculaNotFoundException, PaisNotFoundException, PaisDenegadoException {
         final var p = grilla.getPelicula(nombre);
         var codigoPais = ip.octetos.get(0);
 
@@ -15,6 +15,8 @@ public class GrillaPeliculaProxy {
         for (Pais pais: p.getPaises()) {
             if (paisActual.equals(pais)) return p;
         }
+
+        throw new PaisDenegadoException();
     }
 
     private static Pais getString(Integer codigoPais) throws PaisNotFoundException {
