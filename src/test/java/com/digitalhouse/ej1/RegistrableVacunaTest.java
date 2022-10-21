@@ -1,20 +1,21 @@
 package com.digitalhouse.ej1;
 
+import model.Persona;
 import org.junit.jupiter.api.Test;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RegisterVaccineTest {
+public class RegistrableVacunaTest {
 
     @Test
-    public void test1(){
+    public void test1() {
         //GIVEN
-        var vac = new RegisterVaccine();
+        var vac = new RegistrableVacuna();
         var dni = "1234";
-        var date = new Date();
-        var persona = new Person("Thomas", "Desch", dni, "asd", date);
+        var date = LocalDate.now();
+        var persona = new Persona("Thomas", "Desch", dni, "asd", date);
         //WHEN
         var actual = vac.registrar(persona);
         //THEN

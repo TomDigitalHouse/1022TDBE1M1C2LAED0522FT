@@ -1,25 +1,25 @@
 package ej1;
 
-import com.digitalhouse.ej1.Person;
+import model.Persona;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PersonaTest {
     @Test
     @DisplayName("WHEN a persona object is created THEN it has the right params")
-    public void test1(){
+    public void test1() {
         //GIVEN
         var nombre = "Thomas";
         var surname = "Thomas";
         var dni = "123456";
         var vaccine = "moderna";
-        var date = new Date();
+        var date = LocalDate.now();
         //WHEN
-        var persona = new Person(nombre, surname, dni, vaccine, date);
+        var persona = new Persona(nombre, surname, dni, vaccine, date);
         //THEN
         assertEquals(persona.name(), nombre);
         assertEquals(persona.surname(), surname);
