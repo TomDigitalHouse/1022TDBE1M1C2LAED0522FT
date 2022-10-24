@@ -12,16 +12,10 @@ public class ComputadoraFactory {
 
         var clave = "key:" + ram + ":" + disco;
 
-        System.out.println(clave);
-
         if (!macLigeros.containsKey(clave)) {
             macLigeros.put(clave, new Computadora(ram, disco));
-            System.out.println("PC creada");
             return macLigeros.get(clave);
-
         }
-        System.out.println("PC obtenida");
-
         return macLigeros.get(clave);
     }
 }
