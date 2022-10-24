@@ -1,6 +1,11 @@
+package service;
+
+import exceptions.PeliculaNotFoundException;
+import model.Pelicula;
+
 import java.util.ArrayList;
 
-public class GrillaPelicula implements IGrillaPelicula{
+public class GrillaPeliculaImpl implements GrillaPelicula {
 
     ArrayList<Pelicula> peliculas = new ArrayList<>();
 
@@ -10,9 +15,9 @@ public class GrillaPelicula implements IGrillaPelicula{
 
 
     @Override
-    public Pelicula getPelicula(String nombre) throws PeliculaNotFoundException{
+    public Pelicula getPelicula(String nombre) throws PeliculaNotFoundException {
         for (Pelicula p: this.peliculas) {
-            if (p.getNombre() == nombre) return p;
+            if (p.nombre().equals(nombre)) return p;
         }
         throw new PeliculaNotFoundException("No se encontro la pelicula en el catalogo.");
     }
