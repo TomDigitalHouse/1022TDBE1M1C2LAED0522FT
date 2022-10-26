@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertSame;
 
-public class ComputadoraFactoryTest {
+public class ArbolFactoryTest {
     @Test
     @DisplayName("WHEN we ask the factory for to create the same object twice THEN it should be the same object")
     public void test1() {
