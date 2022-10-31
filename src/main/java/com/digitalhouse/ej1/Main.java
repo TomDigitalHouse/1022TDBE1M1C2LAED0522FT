@@ -16,56 +16,116 @@ public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
     private final static String log4jConfigFile = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "log4j2.xml";
 
-    private static final String DROP_TABLE_IF_EXISTS = "DROP TABLE IF EXISTS ANIMALES;";
-    private static final String CREATE_TABLE
-            = "CREATE TABLE ANIMALES (ID INT PRIMARY KEY, NOMBRE VARCHAR (50) NOT NULL, TIPO VARCHAR (50) NOT NULL)";
+    private final static String DROP = "DROP TABLE IF EXISTS CUENTAS;";
 
-    private static final String INSERT_ANIMAL = "INSERT INTO ANIMALES ( NOMBRE, TIPO) VALUES ('MANCHITAS', 'PERRO');";
-    private static final String INSERT_ANIMAL1 = "INSERT INTO ANIMALES ( NOMBRE, TIPO) VALUES ( 'MANDY', 'PERRO');";
-    private static final String INSERT_ANIMAL2 = "INSERT INTO ANIMALES ( NOMBRE, TIPO) VALUES ('MANDY', 'PERRO');";
-    private static final String INSERT_ANIMAL3 = "INSERT INTO ANIMALES ( NOMBRE, TIPO) VALUES ( 'MANDY', 'GATO');";
-    private static final String INSERT_ANIMAL4 = "INSERT INTO ANIMALES ( NOMBRE, TIPO) VALUES ( 'MANDY', 'GATO');";
+    private final static String CREATE = "CREATE TABLE CUENTAS (ID INT PRIMARY KEY AUTO_INCREMENT, NOMBRE VARCHAR, NRO_CUENTA VARCHAR, SALDO NUMBER);";
 
-    private static final String DELETE_ANIMAL = "DELETE FROM ANIMALES WHERE ID = 5";
+    private final static String UPDATE_SALDO = "UPDATE CUENTAS SET SALDO = ? WHERE id = ?";
 
-    private static final String SELECT_ALL = "SELECT * FROM ANIMALES";
+    private final static String INSERT = "INSERT INTO CUENTAS (NOMBRE, NRO_CUENTA, SALDO) VALUES (?,?,?)";
 
-    public static void main(String[] args) throws SQLException {
-        var connection = obtenerConexion();
-        var statement = connection.createStatement();
-        statement.execute(DROP_TABLE_IF_EXISTS);
-        statement.execute(CREATE_TABLE);
-        statement.execute(INSERT_ANIMAL);
-        statement.execute(INSERT_ANIMAL1);
-        statement.execute(INSERT_ANIMAL2);
-        statement.execute(INSERT_ANIMAL3);
-        statement.execute(INSERT_ANIMAL4);
+    private final static String SELECT_ALL = "SELECT * FROM CUENTAS;";
 
-        mostrarAnimales(connection);
+    public static void main(String[] args) throws IOException, SQLException {
+        startLogger();
 
-        statement.execute(DELETE_ANIMAL);
+        var cuenta = new Cuenta(1, 100, "Sueldo", 0);
 
-        mostrarAnimales(connection);
+        create();
+        insert(cuenta);
+        //update(cuenta);
+        //updateWithTX(cuenta);
 
-        connection.close();
+        updateWithStatement(cuenta);
+
+        mostrarResultados();
+
+
     }
 
-    private static void mostrarAnimales(Connection connection) throws SQLException {
-        var statement = connection.createStatement();
-        var resultSet = statement.executeQuery(SELECT_ALL);
+    private static void create() throws SQLException {
+        var connection = getConnection();
+        var create = connection.createStatement();
+        create.execute(DROP + CREATE);
+    }
 
-        while (resultSet.next()) {
-           // System.out.println("ID: " + resultSet.getInt(1) + " NOMBRE: " + resultSet.getString(2) + " TIPO: " + resultSet.getString(3));
-            logger.info("ID: " + resultSet.getInt(1) + " NOMBRE: " + resultSet.getString(2) + " TIPO: " + resultSet.getString(3));
+    private static void insert(Cuenta cuenta) throws SQLException {
+        var connection = getConnection();
+        var insert = connection.prepareStatement(INSERT);
+
+        insert.setString(1, cuenta.nombre());
+        insert.setInt(2, cuenta.nroCuenta());
+        insert.setDouble(3, cuenta.saldo());
+
+        insert.execute();
+    }
+
+    private static void update(Cuenta cuenta) throws SQLException {
+        var connection = getConnection();
+        var update = connection.prepareStatement(UPDATE_SALDO);
+        update.setDouble(1, cuenta.saldo() + 10.0);
+        update.setInt(2, cuenta.id());
+
+        update.executeUpdate();
+    }
+
+    private static void updateWithStatement(Cuenta cuenta) throws SQLException {
+        var saldo = cuenta.saldo();
+        var fakeId = "1; DROP TABLE CUENTAS";
+
+        var UPDATE_SALDO = "UPDATE CUENTAS SET SALDO = "+saldo +" WHERE id = "+fakeId;
+
+        var connection = getConnection();
+        var update = connection.createStatement();
+        update.executeUpdate(UPDATE_SALDO);
+    }
+
+    private static void updateWithTX(Cuenta cuenta) throws SQLException {
+        Connection connection = null;
+
+        try {
+            connection = getConnection();
+            connection.setAutoCommit(false);
+
+
+            var update = connection.prepareStatement(UPDATE_SALDO);
+            update.setDouble(1, cuenta.saldo() + 15.0);
+            update.setInt(2, cuenta.id());
+
+            var i = 1/0;
+
+            update.executeUpdate();
+
+            connection.commit();
+
+        } catch (SQLException | ArithmeticException e) {
+            if (connection != null) {
+                connection.rollback();
+            }
+        } finally {
+            if (connection != null) {
+                connection.close();
+            }
         }
     }
+
+    private static void mostrarResultados() throws SQLException {
+        var connection = getConnection();
+        var statement = connection.createStatement();
+        var result = statement.executeQuery(SELECT_ALL);
+
+        while (result.next()){
+            logger.info("ID: "+result.getInt(1)+ "NOMBRE: "+result.getString(2)+" NRO_CUENTA: "+result.getInt(3)+" SALDO: "+ result.getDouble(4));
+        }
+    }
+
 
     private static void startLogger() throws IOException {
         var source = new ConfigurationSource(new FileInputStream(log4jConfigFile));
         Configurator.initialize(null, source);
     }
 
-    private static Connection obtenerConexion() throws SQLException {
-        return DriverManager.getConnection("jdbc:h2:~/digital1");
+    private static Connection getConnection() throws SQLException {
+        return DriverManager.getConnection("jdbc:h2:~/clase13");
     }
 }
