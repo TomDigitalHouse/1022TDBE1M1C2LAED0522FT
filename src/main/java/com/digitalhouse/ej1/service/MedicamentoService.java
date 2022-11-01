@@ -21,7 +21,9 @@ public class MedicamentoService {
         }
     }
 
-
+    public  Medicamento buscar(int id){
+        return medicamentoDAO.buscar(id);
+    }
 
     public void update(Medicamento medicamento){
         try {

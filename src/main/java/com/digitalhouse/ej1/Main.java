@@ -24,8 +24,6 @@ public class Main {
 
         service.update(newMedicamento);
 
-        System.out.println(service.buscar(1));
-
 
     }
 

@@ -36,16 +36,44 @@ public class MedicamentoDAOH2 implements MedicamentoDAO {
         }
     }
 
+    @Override
+    public Medicamento buscar(int id) {
+        Connection connection = null;
+        try {
+            connection = getConnection();
+            var buscar = connection.prepareStatement(SELECT);
+            buscar.setInt(1, id);
+            var result = buscar.executeQuery();
 
+            if (result.next()) {
+                var anId = result.getInt(1);
+                var nombre = result.getString(2);
+                var labo = result.getString(3);
+                var cantidad = result.getInt(4);
+                var precio = result.getDouble(5);
+                return new Medicamento(anId, nombre, labo, cantidad, precio);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return null;
+    }
 
     @Override
-    public void update(Medicamento m) throws SQLException {
-        var connection = getConnection();
-        var update = connection.prepareStatement("UPDATE medicamentos set nombre = ? where id = ?");
-        update.setString(1, m.nombre());
-        update.setInt(2, m.id());
+    public void update(Medicamento m) {
+        Connection connection = null;
+        try {
+            connection = getConnection();
+            var update = connection.prepareStatement("UPDATE medicamentos set nombre = ? where id = ?");
+            update.setString(1, m.nombre());
+            update.setInt(2, m.id());
 
-        update.executeUpdate();
+            update.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     private Connection getConnection() throws SQLException {
