@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class PacienteDAO implements Dao<Paciente> {
 
-    private final static String DB_URL = "jdbc:h2:~/db_clinica;INIT=RUNSCRIPT FROM 'create2.sql'";
+    private final static String DB_URL = "jdbc:h2:~/dbClinica2;INIT=RUNSCRIPT FROM 'create2.sql'";
     private final static String SELECT_ID = "SELECT * FROM pacientes WHERE id = ?";
 
     @Override
@@ -33,7 +33,8 @@ public class PacienteDAO implements Dao<Paciente> {
                 var fechaIngreso = result.getDate(5);
                 var domicilioId = result.getInt(6);
 
-                return new Paciente(id, nombre, apellido, dni, fechaIngreso.toLocalDate(), new Domicilio(domicilioId, null, 0, null, null));
+                return new Paciente(id, nombre, apellido, dni, fechaIngreso.toLocalDate(),
+                        new Domicilio(domicilioId, null, 0, null, null));
             }
             connection.close();
         } catch (SQLException e) {

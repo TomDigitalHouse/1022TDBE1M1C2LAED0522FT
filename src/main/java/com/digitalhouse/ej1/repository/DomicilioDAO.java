@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class DomicilioDAO implements Dao<Domicilio> {
 
-    private final static String DB_URL = "jdbc:h2:~/db_clinica;INIT=RUNSCRIPT FROM 'create2.sql'";
+    private final static String DB_URL = "jdbc:h2:~/dbClinica;INIT=RUNSCRIPT FROM 'create2.sql'";
     private final static String SELECT_ID = "SELECT * FROM domicilio WHERE id = ?";
 
     @Override
