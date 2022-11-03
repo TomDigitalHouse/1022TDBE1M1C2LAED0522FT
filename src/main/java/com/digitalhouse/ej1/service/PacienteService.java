@@ -1,10 +1,12 @@
 package com.digitalhouse.ej1.service;
 
+import com.digitalhouse.ej1.model.Domicilio;
 import com.digitalhouse.ej1.model.Paciente;
 import com.digitalhouse.ej1.repository.DomicilioDAO;
 import com.digitalhouse.ej1.repository.PacienteDAO;
 import lombok.AllArgsConstructor;
 
+import java.util.List;
 import java.util.Optional;
 
 @AllArgsConstructor
@@ -33,6 +35,11 @@ public class PacienteService {
             ));
         }
         return Optional.empty();
+    }
+
+    public List<Domicilio> getPacientes(){
+       // return pacienteDAO.getAll();
+        return domicilioDAO.getAll();
     }
 
     public void eliminar(int id) {

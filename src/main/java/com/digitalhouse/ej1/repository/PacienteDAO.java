@@ -5,10 +5,13 @@ import com.digitalhouse.ej1.model.Paciente;
 
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class PacienteDAO implements Dao<Paciente> {
     private final static String SELECT_ID = "SELECT * FROM pacientes WHERE id = ?";
+    private final static String SELECT = "SELECT * FROM pacientes";
     private final static String INSERT = "INSERT INTO pacientes(id,nombre,dni,ingreso,domicilio_id) VALUES(?,?,?,?,?)";
     private final static String UPDATE = "UPDATE pacientes set nombre = ?, dni = ?, ingreso = ?, domicilio_id = ? where id = ?";
     private final static String DELETE = "DELETE FROM pacientes WHERE id = ?";
@@ -79,6 +82,31 @@ public class PacienteDAO implements Dao<Paciente> {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public List<Paciente> getAll() {
+        var lista = new ArrayList<Paciente>();
+        try (var connection = H2Helper.getConnection()) {
+            var buscar = connection.prepareStatement(SELECT);
+            var result = buscar.executeQuery();
+            while (result.next()) {
+                var id = result.getInt(1);
+                var nombre = result.getString(2);
+                var apellido = result.getString(3);
+                var dni = result.getString(4);
+                var fechaIngreso = result.getDate(5);
+                var domicilioId = result.getInt(6);
+
+                lista.add(
+                        new Paciente(id, nombre, apellido, dni, fechaIngreso.toLocalDate(),
+                                new Domicilio(domicilioId, null, 0, null, null)));
+;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return lista;
     }
 }
 

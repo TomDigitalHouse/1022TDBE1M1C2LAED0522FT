@@ -1,15 +1,20 @@
 package com.digitalhouse.ej1.repository;
 
 import com.digitalhouse.ej1.model.Domicilio;
+import com.digitalhouse.ej1.model.Paciente;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class DomicilioDAO implements Dao<Domicilio> {
     private final static Logger logger = LogManager.getLogger(DomicilioDAO.class);
     private final static String SELECT_ID = "SELECT * FROM domicilio WHERE id = ?";
+    private final static String SELECT = "SELECT * FROM domicilio";
+
     private final static String INSERT = "INSERT INTO domicilio(id,calle,numero,localidad,provincia) VALUES(?,?,?,?,?)";
     private final static String UPDATE = "UPDATE domicilio set calle = ?, numero = ?, localidad = ?, provincia = ? where id = ?";
 
@@ -78,5 +83,26 @@ public class DomicilioDAO implements Dao<Domicilio> {
             logger.error(e);
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public List<Domicilio> getAll() {
+        var lista = new ArrayList<Domicilio>();
+        try (var connection = H2Helper.getConnection()) {
+            var buscar = connection.prepareStatement(SELECT);
+            var result = buscar.executeQuery();
+            while (result.next()) {
+                var id = result.getInt(1);
+                var calle = result.getString(2);
+                var numero = result.getInt(3);
+                var localidad = result.getString(4);
+                var provincia = result.getString(5);
+
+                lista.add(new Domicilio(id, calle, numero, localidad, provincia));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return lista;
     }
 }
