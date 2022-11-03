@@ -1,8 +1,10 @@
 package com.digitalhouse.ej1.repository;
 
+import java.util.Optional;
+
 public interface Dao<T> {
-    T darDeAlta(T t);
-    T buscar(int id);
+    void darDeAlta(T t);
+    Optional<T> buscar(int id);
     void eliminar(int id);
     void modificar(T t);
 }

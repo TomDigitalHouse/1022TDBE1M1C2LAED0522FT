@@ -1,4 +1,4 @@
-create table if not exists domicilio(id int auto_increment primary key, calle varchar(255), numero varchar(255), localidad varchar(255), provincia varchar(255));
+create table if not exists domicilio(id int primary key, calle varchar(255), numero varchar(255), localidad varchar(255), provincia varchar(255));
 create table if not exists pacientes
 (
     id           int auto_increment primary key,
@@ -6,5 +6,6 @@ create table if not exists pacientes
     dni          varchar(255),
     ingreso      date,
     domicilio_id int,
-    foreign key (domicilio_id) references domicilio (id)
+    FOREIGN KEY (domicilio_id) REFERENCES domicilio (id)
+    ON DELETE CASCADE
 );
