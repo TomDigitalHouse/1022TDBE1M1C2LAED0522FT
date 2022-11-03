@@ -12,34 +12,34 @@ public class PacienteService {
     private final PacienteDAO pacienteDAO;
     private final DomicilioDAO domicilioDAO;
 
-    public void darDeAlta(Paciente paciente){
-       domicilioDAO.darDeAlta(paciente.domicilio());
-       pacienteDAO.darDeAlta(paciente);
+    public void darDeAlta(Paciente paciente) {
+        domicilioDAO.darDeAlta(paciente.domicilio());
+        pacienteDAO.darDeAlta(paciente);
     }
 
-    public Optional<Paciente> buscar(int id){
-       var paciente = pacienteDAO.buscar(id);
+    public Optional<Paciente> buscar(int id) {
+        var paciente = pacienteDAO.buscar(id);
 
-       if (paciente.isPresent()){
-           var newPaciente = paciente.get();
-           var domicilio = domicilioDAO.buscar(newPaciente.domicilio().id()).orElseThrow();
-           return Optional.of(new Paciente(
-                   newPaciente.id(),
-                   newPaciente.nombre(),
-                   newPaciente.apellido(),
-                   newPaciente.dni(),
-                   newPaciente.fechaIngreso(),
-                   domicilio
-           ));
-       }
-             return Optional.empty();
+        if (paciente.isPresent()) {
+            var newPaciente = paciente.get();
+            var domicilio = domicilioDAO.buscar(newPaciente.domicilio().id()).orElseThrow();
+            return Optional.of(new Paciente(
+                    newPaciente.id(),
+                    newPaciente.nombre(),
+                    newPaciente.apellido(),
+                    newPaciente.dni(),
+                    newPaciente.fechaIngreso(),
+                    domicilio
+            ));
+        }
+        return Optional.empty();
     }
 
-    public void eliminar(int id){
+    public void eliminar(int id) {
         pacienteDAO.eliminar(id);
     }
 
-    public void modificar(Paciente paciente){
+    public void modificar(Paciente paciente) {
         pacienteDAO.modificar(paciente);
         domicilioDAO.modificar(paciente.domicilio());
     }
