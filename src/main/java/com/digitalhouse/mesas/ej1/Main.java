@@ -1,4 +1,4 @@
-package com.digitalhouse.ej1;
+package com.digitalhouse.mesas.ej1;
 
 import com.digitalhouse.ej1.model.Perro;
 import com.digitalhouse.ej1.service.PerroIO;
@@ -18,9 +18,7 @@ public class Main {
 
         PerroIO.write(Arrays.asList(new Perro("perro1", 5), new Perro("perro2", 8)));
 
-        var perros = PerroIO.read();
-
-        perros.forEach(System.out::println);
+        PerroIO.read().forEach(System.out::println);
     }
 
     private static void startLogger() throws IOException {
