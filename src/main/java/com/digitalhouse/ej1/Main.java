@@ -1,7 +1,8 @@
 package com.digitalhouse.ej1;
 
-import com.digitalhouse.ej1.model.Perro;
-import com.digitalhouse.ej1.service.PerroIO;
+import com.digitalhouse.ej1.model.Empleado;
+import com.digitalhouse.ej1.model.Empresa;
+import com.digitalhouse.ej1.service.EmpresasIO;
 import org.apache.logging.log4j.core.config.ConfigurationSource;
 import org.apache.logging.log4j.core.config.Configurator;
 
@@ -16,11 +17,21 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         startLogger();
 
-        PerroIO.write(Arrays.asList(new Perro("perro1", 5), new Perro("perro2", 8)));
 
-        var perros = PerroIO.read();
 
-        perros.forEach(System.out::println);
+
+        var empleado1= new Empleado("nombre", "ape", "asdasd", 500);
+        var empleado2= new Empleado("asdasd", "fgfg", "asdasd", 343);
+        var empleado3= new Empleado("asdas", "fdfg", "asdasd", 2342);
+        var empleado4= new Empleado("asdsad", "fgfg", "asdasd", 23432);
+
+        var empresa = new Empresa("54545","digital house", Arrays.asList(empleado1, empleado2, empleado3, empleado4));
+
+        EmpresasIO.writeToDAT(empresa);
+
+
+        EmpresasIO.writeToCSV(empresa);
+       // EmpresasIO.read().empleados().forEach(System.out::println);
     }
 
     private static void startLogger() throws IOException {
