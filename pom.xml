@@ -8,11 +8,11 @@
         <version>2.7.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>com.digitalhouse</groupId>
+    <artifactId>Clase22</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-    <description>demo</description>
+    <name>Clase22</name>
+    <description>MVC</description>
     <properties>
         <java.version>19</java.version>
     </properties>
