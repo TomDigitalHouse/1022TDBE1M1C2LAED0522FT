@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static com.example.demo.repository.H2Manager.getConnection;
 
@@ -93,5 +94,10 @@ public class PacienteDaoH2 implements Dao<Paciente> {
         } catch (SQLException e) {
             logger.error(e.getMessage());
         }
+    }
+
+    @Override
+    public Optional<Paciente> getByMatricula(int id) {
+        return Optional.empty();
     }
 }

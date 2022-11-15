@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static com.example.demo.repository.H2Manager.getConnection;
 
@@ -19,6 +20,8 @@ public class OdontologoDaoH2 implements Dao<Odontologo> {
     private static final String UPDATE = "UPDATE ODONTOLOGOS SET NOMBRE = ?, APELLIDO = ?  WHERE MATRICULA = ?;";
 
     private static final String SELECT_ALL = "SELECT * FROM ODONTOLOGOS;";
+
+    private static final String SELECT_BY_MATRICULA = "SELECT * FROM ODONTOLOGOS WHERE matricula = ?;";
 
     private static final String DELETE = "DELETE FROM ODONTOLOGOS WHERE MATRICULA = ?;";
 
@@ -83,5 +86,21 @@ public class OdontologoDaoH2 implements Dao<Odontologo> {
             logger.error(e.getMessage());
         }
 
+    }
+
+    @Override
+    public Optional<Odontologo> getByMatricula(int matricula) {
+        try (var connection = getConnection()) {
+            var statement = connection.prepareStatement(SELECT_BY_MATRICULA);
+            statement.setInt(1, matricula);
+            var resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                logger.info(" matricula: " + resultSet.getInt(1) + " nombre: " + resultSet.getString(2) + " apellido " + resultSet.getString(3));
+                return Optional.of (new Odontologo(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3)));
+            }
+        } catch (SQLException e) {
+            logger.error(e.getMessage());
+        }
+        return Optional.empty();
     }
 }

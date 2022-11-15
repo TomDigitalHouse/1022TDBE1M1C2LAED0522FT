@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @AllArgsConstructor
 @Service
@@ -26,6 +27,10 @@ public class OdontologoService {
 
     public void eliminar(int matricula) {
         odontologoDaoH2.delete(matricula);
+    }
+
+    public Optional<Odontologo> getByMatricula(int matricula){
+        return odontologoDaoH2.getByMatricula(matricula);
     }
 
 }

@@ -3,33 +3,37 @@ package com.example.demo.controller;
 import com.example.demo.model.Odontologo;
 import com.example.demo.services.OdontologoService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
-@RestController("/odontologos")
+@RestController
 @AllArgsConstructor
 public class OdontologoController {
-    private final OdontologoService odontologoService;
+    private final OdontologoService service;
 
-    @GetMapping("/all")
-    public List<Odontologo> listarOdontologos() {
-        return odontologoService.listar();
+    @GetMapping("/odontologos")
+    public List<Odontologo> listar() {
+        return service.listar();
     }
 
     @PostMapping("/nuevosOdontologos")
-    public void agregarOdontologo(@RequestBody Odontologo odontologo) {
-        if (odontologo != null) odontologoService.agregar(odontologo);
+    public void agregar(@RequestBody Odontologo paciente) {
+        if (paciente != null) service.agregar(paciente);
     }
 
     @PutMapping("/modificarOdontologos")
-    public void modificarOdontologos(@RequestBody Odontologo odontologo) {
-        odontologoService.modificar(odontologo);
+    public void modificar(@RequestBody Odontologo paciente) {
+        service.modificar(paciente);
     }
 
-    @DeleteMapping("/eliminar")
-    public void eliminarOdontologos(@RequestBody int matricula) {
-        odontologoService.eliminar(matricula);
+    @DeleteMapping("/eliminarOdontologo")
+    public void eliminar(@RequestBody int id) {
+        service.eliminar(id);
+    }
+    @GetMapping("/odontologos/{id}")
+    public Optional<Odontologo> getByMatricula(@PathVariable int id) {
+        return service.getByMatricula(id);
     }
 }

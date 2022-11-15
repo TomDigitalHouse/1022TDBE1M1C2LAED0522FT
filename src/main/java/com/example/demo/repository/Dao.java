@@ -2,6 +2,7 @@ package com.example.demo.repository;
 
 
 import java.util.List;
+import java.util.Optional;
 
 public interface Dao<T> {
 
@@ -12,5 +13,7 @@ public interface Dao<T> {
     void update(T entidad);
 
     void delete(int id);
+
+    Optional<T> getByMatricula(int id);
 
 }
