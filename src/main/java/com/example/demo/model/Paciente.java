@@ -1,6 +1,6 @@
 package com.example.demo.model;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
-public record Paciente(int id, String nombre, String apellido, String email, String dni, String fechaIngreso) {
+public record Paciente(int id, String nombre, String apellido, String domicilio, String dni, Date fechaAlta) {
 }
