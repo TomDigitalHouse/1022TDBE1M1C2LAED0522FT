@@ -30,7 +30,7 @@ public class OdontologoService {
     }
 
     public Optional<Odontologo> getByMatricula(int matricula){
-        return odontologoDaoH2.getByMatricula(matricula);
+        return odontologoDaoH2.getBy(matricula);
     }
 
 }

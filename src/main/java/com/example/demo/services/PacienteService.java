@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @AllArgsConstructor
 @Service
@@ -27,6 +28,10 @@ public class PacienteService {
 
     public void eliminar(int id) {
         pacienteDaoH2.delete(id);
+    }
+
+    public Optional<Paciente> getById(int id){
+        return pacienteDaoH2.getBy(id);
     }
 
 }

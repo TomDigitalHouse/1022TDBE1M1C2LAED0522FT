@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,7 @@ public class PacienteDaoH2 implements Dao<Paciente> {
 
     private static final String INSERT = "INSERT INTO PACIENTES (ID, NOMBRE, APELLIDO, DOMICILIO , DNI, FECHAALTA) VALUES (?,?,?,?,?,?);";
     private static final String UPDATE = "UPDATE PACIENTES SET NOMBRE = ?, APELLIDO = ?, DOMICILIO = ?, DNI = ?, FECHAALTA = ? WHERE ID = ?;";
-
+    private static final String SELECT_BY_ID = "SELECT * FROM PACIENTES WHERE id = ?;";
     private static final String SELECT_ALL = "SELECT * FROM PACIENTES;";
 
     private static final String DELETE = "DELETE FROM PACIENTES WHERE ID = ?;";
@@ -32,7 +33,7 @@ public class PacienteDaoH2 implements Dao<Paciente> {
             var resultSet = statement.executeQuery(SELECT_ALL);
             while (resultSet.next()) {
                 logger.info("id: " + resultSet.getInt(1) + " nombre: " + resultSet.getString(2) + " apellido: " + resultSet.getString(3) + " domicilio: " + resultSet.getString(4) + " dni: " + resultSet.getString(5) + " fecha de alta: " + resultSet.getDate(6));
-                pacientes.add(new Paciente(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getString(5), resultSet.getDate(6)));
+                pacientes.add(new Paciente(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getString(5), resultSet.getDate(6).toLocalDate()));
             }
             if (pacientes.size() == 0) logger.info("no hay pacientes en la lista");
 
@@ -52,7 +53,7 @@ public class PacienteDaoH2 implements Dao<Paciente> {
             agregar.setString(3, paciente.apellido());
             agregar.setString(4, paciente.domicilio());
             agregar.setString(5, paciente.dni());
-            agregar.setDate(6, paciente.fechaAlta());
+            agregar.setDate(6, Date.valueOf(paciente.fechaAlta()));
 
             agregar.execute();
             logger.info("Se agrego correctamente a la base de datos!");
@@ -69,7 +70,7 @@ public class PacienteDaoH2 implements Dao<Paciente> {
             update.setString(2, paciente.apellido());
             update.setString(3, paciente.domicilio());
             update.setString(4, paciente.dni());
-            update.setDate(5, paciente.fechaAlta());
+            update.setDate(5, Date.valueOf(paciente.fechaAlta()));
             update.setInt(6, paciente.id());
 
             update.executeUpdate();
@@ -97,7 +98,25 @@ public class PacienteDaoH2 implements Dao<Paciente> {
     }
 
     @Override
-    public Optional<Paciente> getByMatricula(int id) {
+    public Optional<Paciente> getBy(int id) {
+        try (var connection = getConnection()) {
+            var statement = connection.prepareStatement(SELECT_BY_ID);
+            statement.setInt(1, id);
+            var resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                //logger.info(" id: " + resultSet.getInt(1) + " nombre: " + resultSet.getString(2) + " apellido " + resultSet.getString(3));
+                return Optional.of(
+                        new Paciente(
+                                resultSet.getInt(1),
+                                resultSet.getString(2),
+                                resultSet.getString(3),
+                                resultSet.getString(4),
+                                resultSet.getString(5),
+                                resultSet.getDate(6).toLocalDate()));
+            }
+        } catch (SQLException e) {
+            logger.error(e.getMessage());
+        }
         return Optional.empty();
     }
 }

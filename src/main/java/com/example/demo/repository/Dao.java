@@ -14,6 +14,6 @@ public interface Dao<T> {
 
     void delete(int id);
 
-    Optional<T> getByMatricula(int id);
+    Optional<T> getBy(int id);
 
 }

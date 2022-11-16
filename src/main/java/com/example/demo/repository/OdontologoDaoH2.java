@@ -89,7 +89,7 @@ public class OdontologoDaoH2 implements Dao<Odontologo> {
     }
 
     @Override
-    public Optional<Odontologo> getByMatricula(int matricula) {
+    public Optional<Odontologo> getBy(int matricula) {
         try (var connection = getConnection()) {
             var statement = connection.prepareStatement(SELECT_BY_MATRICULA);
             statement.setInt(1, matricula);
