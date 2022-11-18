@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import com.example.demo.exceptions.OdontologoNotFound;
+import com.example.demo.exceptions.PacienteNotFound;
 import com.example.demo.model.Turno;
 import com.example.demo.model.TurnoRequest;
 import com.example.demo.services.TurnoService;

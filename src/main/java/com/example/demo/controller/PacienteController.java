@@ -3,7 +3,6 @@ package com.example.demo.controller;
 import com.example.demo.model.Paciente;
 import com.example.demo.services.PacienteService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

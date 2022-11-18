@@ -1,7 +1,7 @@
 package com.example.demo.services;
 
-import com.example.demo.controller.OdontologoNotFound;
-import com.example.demo.controller.PacienteNotFound;
+import com.example.demo.exceptions.OdontologoNotFound;
+import com.example.demo.exceptions.PacienteNotFound;
 import com.example.demo.model.Turno;
 import com.example.demo.repository.Dao;
 import lombok.AllArgsConstructor;
