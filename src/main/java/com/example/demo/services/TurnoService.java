@@ -7,7 +7,6 @@ import com.example.demo.repository.Dao;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -18,17 +17,16 @@ public class TurnoService {
     private final PacienteService pacienteService;
     private final OdontologoService odontologoService;
 
-
     public List<Turno> listar() {
         return dao.getAll();
     }
 
-    public Turno agregar(int id, int pacienteId, int matricula, LocalDate date) throws OdontologoNotFound, PacienteNotFound {
-        var odontologo = odontologoService.getByMatricula(matricula).orElseThrow(OdontologoNotFound::new);
-        var paciente = pacienteService.getById(pacienteId).orElseThrow(PacienteNotFound::new);
-        var turno = new Turno(id, odontologo, paciente, date);
-        dao.add(turno);
+    public Turno agregar(Turno turno) throws OdontologoNotFound, PacienteNotFound {
+        var odontologo = odontologoService.getByMatricula(turno.odontologo().matricula()).orElseThrow(OdontologoNotFound::new);
+        var paciente = pacienteService.getById(turno.paciente().id()).orElseThrow(PacienteNotFound::new);
+        var newTurno = new Turno(turno.id(), odontologo, paciente, turno.fecha());
+        dao.add(newTurno);
 
-        return turno;
+        return newTurno;
     }
 }

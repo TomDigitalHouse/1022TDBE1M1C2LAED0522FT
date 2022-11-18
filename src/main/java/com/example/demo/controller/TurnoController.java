@@ -3,7 +3,6 @@ package com.example.demo.controller;
 import com.example.demo.exceptions.OdontologoNotFound;
 import com.example.demo.exceptions.PacienteNotFound;
 import com.example.demo.model.Turno;
-import com.example.demo.model.TurnoRequest;
 import com.example.demo.services.TurnoService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -26,12 +25,9 @@ public class TurnoController {
     }
 
     @PostMapping("/turnos")
-    public ResponseEntity<?> listar(@RequestBody TurnoRequest turnoRequest) {
+    public ResponseEntity<?> listar(@RequestBody Turno turno) {
         try {
-            return ResponseEntity.of(Optional.of(service.agregar(turnoRequest.id(),
-                    turnoRequest.pacienteId(),
-                    turnoRequest.odontologoId(),
-                    turnoRequest.date())));
+            return ResponseEntity.of(Optional.of(service.agregar(turno)));
         } catch (OdontologoNotFound | PacienteNotFound e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
