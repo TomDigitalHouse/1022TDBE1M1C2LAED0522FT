@@ -20,7 +20,7 @@ public class OdontologoController {
 
     @PostMapping("/nuevosOdontologos")
     public void agregar(@RequestBody Odontologo paciente) {
-        if (paciente != null) service.agregar(paciente);
+         service.agregar(paciente);
     }
 
     @PutMapping("/modificarOdontologos")

@@ -22,7 +22,7 @@ public class TurnoService {
     }
 
     public Turno agregar(Turno turno) throws OdontologoNotFound, PacienteNotFound {
-        var odontologo = odontologoService.getByMatricula(turno.odontologo().matricula()).orElseThrow(OdontologoNotFound::new);
+        var odontologo = odontologoService.getByMatricula(turno.odontologo().getMatricula()).orElseThrow(OdontologoNotFound::new);
         var paciente = pacienteService.getById(turno.paciente().id()).orElseThrow(PacienteNotFound::new);
         var newTurno = new Turno(turno.id(), odontologo, paciente, turno.fecha());
         dao.add(newTurno);

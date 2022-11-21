@@ -1,7 +1,7 @@
 package com.example.demo.services;
 
 import com.example.demo.model.Odontologo;
-import com.example.demo.repository.Dao;
+import com.example.demo.repository.OdontologoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,26 +11,26 @@ import java.util.Optional;
 @AllArgsConstructor
 @Service
 public class OdontologoService {
-    private final Dao<Odontologo> odontologoDaoH2;
+    private final OdontologoRepository repository;
 
     public void agregar(Odontologo odontologo) {
-        odontologoDaoH2.add(odontologo);
+        repository.save(odontologo);
     }
 
     public List<Odontologo> listar() {
-        return odontologoDaoH2.getAll();
+        return repository.findAll();
     }
 
     public void modificar(Odontologo odontologo) {
-        odontologoDaoH2.update(odontologo);
+        repository.save(odontologo);
     }
 
     public void eliminar(int matricula) {
-        odontologoDaoH2.delete(matricula);
+        repository.deleteByMatricula(matricula);
     }
 
     public Optional<Odontologo> getByMatricula(int matricula){
-        return odontologoDaoH2.getBy(matricula);
+        return repository.findByMatricula(matricula);
     }
 
 }
