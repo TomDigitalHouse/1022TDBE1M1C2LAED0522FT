@@ -16,20 +16,19 @@ public class ProfesorController {
     private final ProfesorService service;
 
     @PostMapping("/add")
-    public ResponseEntity<Profesor> add(@RequestBody Profesor profesor){
+    public ResponseEntity<Profesor> add(@RequestBody Profesor profesor) {
         return ResponseEntity.ok(service.save(profesor));
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> delete(@PathVariable long id){
+    public ResponseEntity<?> delete(@PathVariable long id) {
         service.deleteById(id);
-        return ResponseEntity.ok("");
+        return ResponseEntity.noContent().build();
     }
 
 
     @GetMapping("/all")
-    public ResponseEntity<List<Profesor>> all(){
+    public ResponseEntity<List<Profesor>> all() {
         return ResponseEntity.ok(service.getAll());
     }
-
 }
