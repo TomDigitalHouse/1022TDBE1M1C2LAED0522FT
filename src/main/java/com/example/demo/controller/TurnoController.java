@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.exceptions.OdontologoNotFound;
-import com.example.demo.exceptions.PacienteNotFound;
+import com.example.demo.exceptions.PacienteNotFoundException;
+import com.example.demo.exceptions.ResourceNotFoundException;
 import com.example.demo.model.Turno;
 import com.example.demo.services.TurnoService;
 import lombok.AllArgsConstructor;
@@ -25,11 +25,7 @@ public class TurnoController {
     }
 
     @PostMapping("/turnos")
-    public ResponseEntity<?> listar(@RequestBody Turno turno) {
-        try {
-            return ResponseEntity.of(Optional.of(service.agregar(turno)));
-        } catch (OdontologoNotFound | PacienteNotFound e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
+    public ResponseEntity<?> listar(@RequestBody Turno turno) throws ResourceNotFoundException, PacienteNotFoundException {
+        return ResponseEntity.ok(service.agregar(turno));
     }
 }

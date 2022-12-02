@@ -1,6 +1,7 @@
 package com.example.demo.services;
 
 
+import com.example.demo.exceptions.PacienteNotFoundException;
 import com.example.demo.model.Paciente;
 import com.example.demo.repository.Dao;
 import lombok.AllArgsConstructor;
@@ -30,8 +31,8 @@ public class PacienteService {
         pacienteDaoH2.delete(id);
     }
 
-    public Optional<Paciente> getById(int id){
-        return pacienteDaoH2.getBy(id);
+    public Paciente getById(int id) throws PacienteNotFoundException {
+        return pacienteDaoH2.getBy(id).orElseThrow(PacienteNotFoundException::new);
     }
 
 }

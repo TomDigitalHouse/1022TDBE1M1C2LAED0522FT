@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 
+import com.example.demo.exceptions.PacienteNotFoundException;
 import com.example.demo.model.Paciente;
 import com.example.demo.services.PacienteService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,5 +32,10 @@ public class PacienteController {
     @DeleteMapping("/eliminarPaciente")
     public void eliminar(@RequestBody int id) {
         pacienteService.eliminar(id);
+    }
+
+    @GetMapping("/pacientes/{id}")
+    public ResponseEntity<Paciente> getByMatricula(@PathVariable int id) throws PacienteNotFoundException {
+        return ResponseEntity.ok(pacienteService.getById(id));
     }
 }

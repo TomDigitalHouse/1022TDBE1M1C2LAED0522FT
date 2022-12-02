@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 
+import com.example.demo.exceptions.ResourceNotFoundException;
 import com.example.demo.model.Odontologo;
 import com.example.demo.services.OdontologoService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,7 +35,8 @@ public class OdontologoController {
         service.eliminar(id);
     }
     @GetMapping("/odontologos/{id}")
-    public Optional<Odontologo> getByMatricula(@PathVariable int id) {
-        return service.getByMatricula(id);
+    public ResponseEntity<Odontologo> getByMatricula(@PathVariable int id) throws ResourceNotFoundException {
+        var odontologo = service.getByMatricula(id);
+        return ResponseEntity.ok(odontologo);
     }
 }

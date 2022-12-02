@@ -1,5 +1,6 @@
 package com.example.demo.services;
 
+import com.example.demo.exceptions.ResourceNotFoundException;
 import com.example.demo.model.Odontologo;
 import com.example.demo.repository.OdontologoRepository;
 import lombok.AllArgsConstructor;
@@ -29,8 +30,8 @@ public class OdontologoService {
         repository.deleteByMatricula(matricula);
     }
 
-    public Optional<Odontologo> getByMatricula(int matricula){
-        return repository.findByMatricula(matricula);
+    public Odontologo getByMatricula(int matricula) throws ResourceNotFoundException {
+        return repository.findByMatricula(matricula).orElseThrow(() -> new ResourceNotFoundException());
     }
 
 }

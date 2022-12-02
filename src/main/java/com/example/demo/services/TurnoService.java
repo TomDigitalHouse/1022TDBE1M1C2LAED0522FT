@@ -1,7 +1,7 @@
 package com.example.demo.services;
 
-import com.example.demo.exceptions.OdontologoNotFound;
-import com.example.demo.exceptions.PacienteNotFound;
+import com.example.demo.exceptions.PacienteNotFoundException;
+import com.example.demo.exceptions.ResourceNotFoundException;
 import com.example.demo.model.Turno;
 import com.example.demo.repository.Dao;
 import lombok.AllArgsConstructor;
@@ -21,9 +21,9 @@ public class TurnoService {
         return dao.getAll();
     }
 
-    public Turno agregar(Turno turno) throws OdontologoNotFound, PacienteNotFound {
-        var odontologo = odontologoService.getByMatricula(turno.odontologo().getMatricula()).orElseThrow(OdontologoNotFound::new);
-        var paciente = pacienteService.getById(turno.paciente().id()).orElseThrow(PacienteNotFound::new);
+    public Turno agregar(Turno turno) throws ResourceNotFoundException, PacienteNotFoundException {
+        var odontologo = odontologoService.getByMatricula(turno.odontologo().getMatricula());
+        var paciente = pacienteService.getById(turno.paciente().id());
         var newTurno = new Turno(turno.id(), odontologo, paciente, turno.fecha());
         dao.add(newTurno);
 
