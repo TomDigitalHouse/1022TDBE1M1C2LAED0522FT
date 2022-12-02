@@ -8,6 +8,7 @@ import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 @AllArgsConstructor
 @Service
@@ -15,9 +16,9 @@ public class PaqueteService {
 
     private final PaqueteRepository repository;
 
-    public Paquete agregar(Paquete paquete) throws PaqueteException {
+    public Paquete agregar(Paquete paquete) throws PaqueteException, BadRequestException {
+        if (Objects.isNull(paquete.destino())) throw new BadRequestException();
         if (repository.exists(Example.of(paquete))) throw new PaqueteException();
-
         return repository.save(paquete);
     }
 

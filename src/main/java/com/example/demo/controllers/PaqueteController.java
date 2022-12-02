@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.model.Paquete;
+import com.example.demo.services.BadRequestException;
 import com.example.demo.services.PaqueteException;
 import com.example.demo.services.PaqueteService;
 import lombok.AllArgsConstructor;
@@ -28,7 +29,7 @@ public class PaqueteController {
     public ResponseEntity<?> crear(@RequestBody Paquete paquete){
         try {
             return ResponseEntity.ok(service.agregar(paquete));
-        } catch (PaqueteException e) {
+        } catch (PaqueteException | BadRequestException e) {
             logger.error(e.getMessage());
            return ResponseEntity.badRequest().build();
         }
@@ -38,4 +39,18 @@ public class PaqueteController {
     public ResponseEntity<List<Paquete>> getPaquetesEnCamino(){
         return ResponseEntity.ok(service.listarPaquetesEnCamino());
     }
+
+    @ExceptionHandler({BadRequestException.class})
+    public ResponseEntity<String> badRequest(BadRequestException e){
+        logger.error(e.getMessage());
+        return ResponseEntity.badRequest().body(e.getMessage());
+    }
+
+    @ExceptionHandler({PaqueteException.class})
+    public ResponseEntity<String> badRequest(PaqueteException e){
+        logger.error(e.getMessage());
+        return ResponseEntity.badRequest().body(e.getMessage());
+    }
+
+
 }
